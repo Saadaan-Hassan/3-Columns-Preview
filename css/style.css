@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* CSS Custom Variables */
+
+  --color-primary-900: hsl(179, 100%, 13%);
+  --color-primary-700: hsl(184, 100%, 22%);
+  --color-primary-500: hsl(31, 77%, 52%);
+
+  --color-neutral-100: hsla(0, 0%, 100%, 0.75);
+  --color-neutral-200: hsl(0, 0%, 95%);
+
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display", cursive;
+
+  --fs-primary: 15px;
+}
+
+body {
+  background-color: var(--color-neutral-200);
+}
+
+main {
+  --radius: 8px;
+
+  width: 70vw;
+  margin: 15vh auto;
+
+  color: var(--color-neutral-100);
+}
+
+.column {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  width: 180px;
+  height: 350px;
+  position: relative;
+}
+
+.column1 {
+  background-color: var(--color-primary-500);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.column2 {
+  background-color: var(--color-primary-700);
+}
+
+.column3 {
+  background-color: var(--color-primary-900);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.column h2 {
+  font-family: var(--ff-secondary);
+  color: var(--color-neutral-200);
+  margin: 15px 0;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+
+.column p {
+  font-family: var(--ff-primary);
+  font-size: 13px;
+  line-height: 1.3rem;
+  padding: 10px 0;
+}
+
+.btn {
+  font-family: var(--ff-primary);
+  position: absolute;
+  bottom: 38px;
+  /* margin: 70px 0; */
+  padding: 12px 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid var(--color-neutral-200);
+  background-color: var(--color-neutral-200);
+}
+
+.btn:hover {
+  background-color: inherit;
+  color: var(--color-neutral-200);
+}
+
+.btn1 {
+  color: var(--color-primary-500);
+}
+
+.btn2 {
+  color: var(--color-primary-700);
+}
+
+.btn3 {
+  color: var(--color-primary-900);
+}
+
+/* Attribute */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Utility Classes */
+.flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Media Quries */
+@media screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 60vw;
+    height: 280px;
+  }
+
+  .column p {
+    padding: 10px;
+  }
+
+  .column1 {
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .column3 {
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+}
